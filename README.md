@@ -22,8 +22,13 @@ This is an experiment to create a minimal proof of concept:
   - Python and argparse for CLI
   - UV for python environment
   
+-----
+Vibe-coded: The README contents above were provided with only the prompt: Implement this.
 
----
+![Screenshot](./.github/img/screenshot.png)
+
+
+-----
 
 ## Usage
 
