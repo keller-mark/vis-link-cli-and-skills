@@ -109,7 +109,7 @@ vislink connect SESSION_ID
 
 ## Skills
 
-The `skills/` directory contains markdown files (with YAML frontmatter) that agents can use as context:
+The `.claude/skills/` directory contains markdown files (with YAML frontmatter) that agents can use as context:
 
 **CLI skills:** `connect`, `get-spec`, `set-spec`, `set-mark`, `set-encoding`
 
