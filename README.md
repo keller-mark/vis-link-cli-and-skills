@@ -22,10 +22,26 @@ This is an experiment to create a minimal proof of concept:
   - Python and argparse for CLI
   - UV for python environment
   
+-----
+Vibe-coded: The README contents above were provided with only the prompt: Implement this.
 
----
+Caveat: Vega-Lite and its example datasets are overrepresented in training data, so this may perform worse with a different visualization framework or with real-world datasets.
 
-## Usage
+
+-----
+
+## Natural Language Usage
+
+```
+> Please run the server in the background.
+...
+> My vislink session ID is {pasted}
+...
+> Please color the points by a different attribute.
+...
+```
+
+## Manual Usage
 
 ### 1. Install dependencies
 
@@ -101,8 +117,17 @@ vislink connect SESSION_ID
 
 ## Skills
 
-The `skills/` directory contains markdown files (with YAML frontmatter) that agents can use as context:
+The `.claude/skills/` directory contains markdown files (with YAML frontmatter) that agents can use as context:
 
 **CLI skills:** `connect`, `get-spec`, `set-spec`, `set-mark`, `set-encoding`
 
 **Vega-Lite reference:** `vl-bar-chart`, `vl-line-chart`, `vl-scatter`, `vl-area-chart`, `vl-heatmap`, `vl-marks`, `vl-encodings`, `vl-field-types`, `vl-aggregation`, `vl-data`
+
+## Screenshot
+
+![Screenshot](./.github/img/screenshot.png)
+
+## Related work
+
+- https://github.com/flekschas/mcp-web
+- https://github.com/vitessce/vitessce-link
