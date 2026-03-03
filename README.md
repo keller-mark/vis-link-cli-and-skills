@@ -102,4 +102,11 @@ The `skills/` directory contains markdown files (with YAML frontmatter) that age
 
 **Vega-Lite reference:** `vl-bar-chart`, `vl-line-chart`, `vl-scatter`, `vl-area-chart`, `vl-heatmap`, `vl-marks`, `vl-encodings`, `vl-field-types`, `vl-aggregation`, `vl-data`
 
+## Screenshot
+
 ![Screenshot](./.github/img/screenshot.png)
+
+## Related work
+
+- https://github.com/flekschas/mcp-web
+- https://github.com/vitessce/vitessce-link
