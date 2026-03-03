@@ -53,6 +53,14 @@ uv run vislink connect SESSION_ID
 
 The session is saved to `~/.vislink/session` and used by all subsequent commands.
 
+**Per-shell override:** Set the `VISLINK_SESSION` environment variable to target a specific session without overwriting the saved file. This takes priority over the saved session and is useful when working with multiple browser tabs simultaneously.
+
+```bash
+VISLINK_SESSION=abc123 vislink get-spec
+# or export it for the duration of a shell session
+export VISLINK_SESSION=abc123
+```
+
 ### 5. Inspect and modify the visualization
 
 ```bash

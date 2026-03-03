@@ -2,6 +2,7 @@
 import argparse
 import asyncio
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -14,6 +15,8 @@ VALID_MARKS = ["point", "bar", "line", "area", "rect", "arc", "text", "tick", "r
 
 
 def load_session() -> str:
+    if session_id := os.environ.get("VISLINK_SESSION"):
+        return session_id
     if not SESSION_FILE.exists():
         print("No session saved. Run: vislink connect SESSION_ID", file=sys.stderr)
         sys.exit(1)
