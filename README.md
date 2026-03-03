@@ -18,6 +18,7 @@ Idea: Create a proof of concept of:
   Tech stack: Use the following technologies:
   - Plain HTML file with modern ESM JavaScript code for frontend
   - Python and Starlette framework for backend
+    - Add a route to serve the frontend HTML via a Jinja2 template
   - Python and argparse for CLI
-  - 
+  - UV for python environment
   
