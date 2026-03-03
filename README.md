@@ -2,7 +2,7 @@
 
 Background: MCP, which is only designed for machines to use, is being replaced by simple CLIs + Skills, which both humans and agents can easily use.
 
-Idea: Create a proof of concept of:
+This is an experiment to create a minimal proof of concept:
 - Frontend web page that renders a visualization. Should be minimal, ideally just an HTML file. Upon loading the page, it connects to the backend websocket server to "request" a SESSION_ID
   - For now, using Vega-Lite
 - Backend server: the bridge between the frontend and the CLI. Should be as minimal as possible.
