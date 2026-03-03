@@ -21,3 +21,79 @@ Idea: Create a proof of concept of:
   - Python and argparse for CLI
   - 
   
+
+---
+
+## Usage
+
+### 1. Install dependencies
+
+```bash
+uv sync
+```
+
+### 2. Start the server
+
+```bash
+uv run uvicorn server:app --reload
+```
+
+### 3. Open the browser
+
+Navigate to `http://localhost:8000`. The page displays a session ID and a default Vega-Lite scatter plot.
+
+### 4. Connect the CLI to the browser session
+
+Copy the session ID from the browser and run:
+
+```bash
+uv run vislink connect SESSION_ID
+```
+
+The session is saved to `~/.vislink/session` and used by all subsequent commands.
+
+### 5. Inspect and modify the visualization
+
+```bash
+# Print the current spec as JSON
+uv run vislink get-spec
+
+# Change the mark type
+uv run vislink set-mark bar
+uv run vislink set-mark line
+
+# Update an encoding channel
+uv run vislink set-encoding x Name --type nominal
+uv run vislink set-encoding y Miles_per_Gallon --aggregate mean --title "Avg MPG"
+
+# Replace the entire spec from a file
+uv run vislink set-spec --file my_chart.json
+
+# Replace the entire spec from a JSON string
+uv run vislink set-spec --spec '{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","data":{"url":"https://vega.github.io/vega-datasets/data/cars.json"},"mark":"bar","encoding":{"x":{"field":"Origin","type":"nominal"},"y":{"aggregate":"count","type":"quantitative"}}}'
+```
+
+### Optional: install the CLI globally
+
+```bash
+uv tool install .
+vislink connect SESSION_ID
+```
+
+## CLI reference
+
+| Command | Arguments | Description |
+|---------|-----------|-------------|
+| `connect` | `SESSION_ID` | Save a session ID for subsequent commands |
+| `get-spec` | — | Print the current Vega-Lite spec as JSON |
+| `set-spec` | `--file PATH` or `--spec JSON` | Replace the current spec |
+| `set-mark` | `MARK` | Change the mark type (`point`, `bar`, `line`, `area`, `rect`, `arc`, `text`, `tick`, `rule`) |
+| `set-encoding` | `CHANNEL FIELD [--type] [--aggregate] [--title]` | Set or replace one encoding channel |
+
+## Skills
+
+The `skills/` directory contains markdown files (with YAML frontmatter) that agents can use as context:
+
+**CLI skills:** `connect`, `get-spec`, `set-spec`, `set-mark`, `set-encoding`
+
+**Vega-Lite reference:** `vl-bar-chart`, `vl-line-chart`, `vl-scatter`, `vl-area-chart`, `vl-heatmap`, `vl-marks`, `vl-encodings`, `vl-field-types`, `vl-aggregation`, `vl-data`
