@@ -25,8 +25,6 @@ This is an experiment to create a minimal proof of concept:
 -----
 Vibe-coded: The README contents above were provided with only the prompt: Implement this.
 
-![Screenshot](./.github/img/screenshot.png)
-
 
 -----
 
@@ -103,3 +101,5 @@ The `skills/` directory contains markdown files (with YAML frontmatter) that age
 **CLI skills:** `connect`, `get-spec`, `set-spec`, `set-mark`, `set-encoding`
 
 **Vega-Lite reference:** `vl-bar-chart`, `vl-line-chart`, `vl-scatter`, `vl-area-chart`, `vl-heatmap`, `vl-marks`, `vl-encodings`, `vl-field-types`, `vl-aggregation`, `vl-data`
+
+![Screenshot](./.github/img/screenshot.png)
