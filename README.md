@@ -25,10 +25,23 @@ This is an experiment to create a minimal proof of concept:
 -----
 Vibe-coded: The README contents above were provided with only the prompt: Implement this.
 
+Caveat: Vega-Lite and its example datasets are overrepresented in training data, so this may perform worse with a different visualization framework or with real-world datasets.
+
 
 -----
 
-## Usage
+## Natural Language Usage
+
+```
+> Please run the server in the background.
+...
+> My vislink session ID is {pasted}
+...
+> Please color the points by a different attribute.
+...
+```
+
+## Manual Usage
 
 ### 1. Install dependencies
 
