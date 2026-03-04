@@ -1,6 +1,6 @@
 # vis-link-cli-and-skills
 
-Background: MCP, which is only designed for machines to use, is being replaced by simple CLIs + Skills, which both humans and agents can easily use.
+Background: MCP, which is only designed for machines to use, is being replaced by the simpler CLIs + Skills, which are designed for both humans and machines to use.
 
 This is an experiment to create a minimal proof of concept:
 - Frontend web page that renders a visualization. Should be minimal, ideally just an HTML file. Upon loading the page, it connects to the backend websocket server to "request" a SESSION_ID
@@ -23,9 +23,9 @@ This is an experiment to create a minimal proof of concept:
   - UV for python environment
   
 -----
-Vibe-coded: The README contents above were provided with only the prompt: Implement this.
+Vibe-coded: The initial implementation was created based on the README contents above along with the prompt: Implement this.
 
-Caveat: Vega-Lite and its example datasets are overrepresented in training data, so this may perform worse with a different visualization framework or with real-world datasets.
+Caveat: Vega-Lite and its example datasets are well represented in training data, so this may perform worse with a different visualization framework or with unseen datasets.
 
 
 -----
@@ -34,6 +34,8 @@ Caveat: Vega-Lite and its example datasets are overrepresented in training data,
 
 ```
 > Please run the server in the background.
+...
+*open browser to obtain session ID*
 ...
 > My vislink session ID is {pasted}
 ...
